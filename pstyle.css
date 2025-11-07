@@ -1,0 +1,167 @@
+:root {
+  --bg-dark: #05071a;
+  --purple: #6f3aff;
+  --pink: #ff4dbe;
+  --blue: #00d4ff;
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --font-main: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: white;
+  overflow-x: hidden;
+}
+
+
+.navbar {
+  width: 100%;
+  padding: 10px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, var(--pink), var(--blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--pink);
+}
+
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), var(--bg-dark)),
+              url("fedesstar-bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 0 10%;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(180deg, var(--blue), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(255, 77, 190, 0.4);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.hero img {
+  width: 280px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid var(--pink);
+  margin-top: 40px;
+  box-shadow: 0 0 30px rgba(255, 77, 190, 0.3);
+}
+
+
+.poetica-section {
+  background: var(--bg-dark);
+  color: white;
+  padding: 140px 10% 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poetica-container {
+  max-width: 900px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 60px 50px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(111, 58, 255, 0.25),
+              inset 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.poetica-container:hover {
+  transform: scale(1.02);
+}
+
+.poetica-container h2 {
+  font-size: 3rem;
+  background: linear-gradient(180deg, var(--blue), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+  text-shadow: 0 0 25px rgba(255, 77, 190, 0.3);
+}
+
+.poetica-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 25px;
+}
+
+.quote-box {
+  margin-top: 50px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--purple);
+  font-style: italic;
+  color: var(--pink);
+  font-size: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 77, 190, 0.25);
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid var(--glass-border);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
